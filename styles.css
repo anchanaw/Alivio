@@ -359,7 +359,6 @@ body {
     text-align: center;
 }
 
-/* "Customized For" */
 .card-title {
     font-family: lato, sans-serif;
     font-size: 15px;
@@ -367,13 +366,12 @@ body {
     color: #444;
 }
 
-/* เส้นคั่น */
 .card-title:after {
     content: "";
     display: block;
     width: 50%;
-    height: 1px;
-    background-color: #303030;
+    height: 0.83px;
+    background-color: #000000;
     margin: 8px auto 15px;
 }
 
@@ -388,7 +386,7 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    overflow: hidden; /* สำคัญมาก */
+    overflow: hidden; /*ตัดเนื้อหาที่ล้นออกไป จะไม่มีส่วนเกินใดๆ แสดงให้เห็น*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -399,8 +397,8 @@ body {
     height: 100%;
     object-fit: cover;
 
-    transform: scale(1.6); /* 👈 ซูมเข้า */
-    object-position: center 0%; /* 👈 ดึงหน้าให้ขึ้น */
+    transform: scale(1.6); 
+    object-position: center 0%; 
 }
 
 .user-name {
@@ -410,7 +408,6 @@ body {
     color: #222;
 }
 
-/* Subtitle */
 .card-sub {
     margin-top: 10px;
     font-family: Georgia, serif;
@@ -419,23 +416,20 @@ body {
     color: #222;
 }
 
-/* List item */
 .card-list {
     margin-top: 12px;
-    padding-left: 0;         /* ลบระยะซ้าย */
-    list-style-position: inside; /* bullet เข้ากลางการ์ดมากขึ้น */
+    padding-left: -20px;         
+    list-style-position: outside; 
     line-height: 1.8;
 }
 
 .card-list li {
     text-align: left;
-    margin-left: 18px;       /* bullet ไม่เข้ากลางเกินไป */
+    margin-left: 18px;       
     color: #444;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
 }
-
-
 
 /* ----- RIGHT SIDE ----- */
 .product-right {
