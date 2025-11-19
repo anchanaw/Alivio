@@ -467,10 +467,9 @@ body {
 /* ----- FOOTER ----- */
 .footer-section {
     background-color: #245852;
-    padding: 100px 120px;
+    padding: 35px 30px;
     color: white;
     font-family: lato, sans-serif;
-
 }
 
 .footer-content {
