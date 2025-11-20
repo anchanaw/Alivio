@@ -305,24 +305,36 @@ body {
 .play-btn {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 51%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.75);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-size: 28px;
-    color: #01996D;
+    width: 60px;
+    height: 60px;
+    border: 2.5px solid white;  /* วงกลมขอบขาว */
+    border-radius: 50%;         /* วงกลม */
+    background: transparent;    /* โปร่งใส */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    backdrop-filter: blur(4px);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .play-btn:hover {
-    background: rgba(255, 255, 255, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);  /* hover ใหญ่ขึ้นนิด */
+}
+
+.play-icon-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 31px;   /* ปรับขนาดตามต้องการ */
+    height: 31px;
+    cursor: pointer;
+
+    opacity: 0.9;  /* ให้สว่างแบบพอดี */
+    transition: 0.3s;
 }
 
 /* ----- PRODUCT SECTION ----- */

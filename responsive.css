@@ -1,0 +1,339 @@
+/* =========================================
+   GLOBAL RESPONSIVE SETTINGS
+========================================= */
+@media screen and (max-width: 1400px) {
+    .hero-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* =========================================
+   NAVBAR — เมนูซ้ายเลื่อน / เมนูขวาคงที่
+========================================= */
+@media screen and (max-width: 1024px) {
+
+    nav {
+        padding: 10px 20px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-logo {
+        font-size: 30px;
+    }
+
+    /* เมนูซ้ายเลื่อน */
+    .nav-left {
+        order: 2;
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 8px 0 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-left::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* เมนูขวาคงที่ */
+    .nav-right {
+        order: 1;
+        display: flex !important;
+        gap: 8px;
+        margin-left: auto;
+        margin-right: -70px;
+        /* ขยับเข้ามา */
+        white-space: nowrap;
+    }
+
+    .start-btn {
+        padding: 6px 18px;
+        font-size: 15px;
+    }
+
+    .nav-left a,
+    .nav-right a {
+        font-size: 16px;        /* เดิม ~22px → ลดลงให้พอดีจอเล็ก */
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .nav-left a,
+    .nav-right a {
+        font-size: 14px;
+    }
+
+    .start-btn {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   HERO SECTION 
+   Desktop = เหมือนเดิม
+   Mobile = ข้อความบน / ภาพล่าง
+========================================= */
+@media screen and (max-width: 900px) {
+
+    .hero-section {
+        height: auto;
+        flex-direction: column;
+        padding: 40px 25px;
+        text-align: center;
+        background-position: center;
+    }
+
+    .hero-content {
+        transform: none;
+        padding-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        padding: 15px 35px;
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   HOW SECTION — Snap Scroll FIX 100%
+   เริ่มที่ Step 1 → Snap ไป Step 2–3 → เลื่อนกลับได้
+========================================= */
+
+/* ยกเลิก margin-top ที่บิด layout บน mobile/iPad */
+@media screen and (max-width: 1024px) {
+    .how-steps .step:nth-child(1),
+    .how-steps .step:nth-child(2),
+    .how-steps .step:nth-child(3) {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .how-section {
+        padding: 60px 20px;
+    }
+
+    .how-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .how-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* SNAP SCROLL */
+    .how-steps {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px 0;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        /* ให้เริ่มที่ Step 1 เต็มใบ */
+        scroll-padding-left: 0;
+    }
+
+    /* buffer ซ้ายเล็กน้อยเพื่อให้ step1 snap ได้ (5% คือค่าที่เสถียรที่สุด) */
+    .how-steps::before {
+        content: "";
+        flex: 0 0 5%;
+    }
+
+    /* buffer ขวาสำหรับ step 3 */
+    .how-steps::after {
+        content: "";
+        flex: 0 0 10%;
+    }
+
+    .how-steps::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* การ์ดทั้ง 3 เท่ากัน + Snap เท่ากัน */
+    .step {
+        flex: 0 0 80%;        /* 80% เสถียรสุด */
+        min-width: 80%;
+        max-width: 80%;
+
+        scroll-snap-align: start;   /* ให้ snap ตามขอบซ้าย → เริ่มที่ step1 “แน่นอน” */
+
+        background: #fff;
+        border-radius: 12px;
+
+        padding: 22px;
+        margin: 0 !important;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        box-sizing: border-box;
+    }
+
+    .step-header {
+        margin-bottom: 15px;
+    }
+
+    .step-number {
+        font-size: 75px;
+    }
+
+    .step-title {
+        top: 45px;
+        left: 25px;
+        font-size: 24px;
+    }
+
+    .step-text {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .step-img {
+        max-width: 240px;
+        align-self: center;
+        margin-top: auto;
+    }
+}
+
+
+/* =========================================
+   SUCCESS SECTION — แบบ C (ย่อ spacing)
+========================================= */
+@media screen and (max-width: 1024px) {
+
+    .success-section {
+        padding: 100px 30px;
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .success-left {
+        width: 100%;
+    }
+
+    .success-title {
+        font-size: 38px;
+    }
+
+    .success-img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .success-video {
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .play-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* =========================================
+   PRODUCT SECTION — แบบ A
+   (รูปบน / การ์ดตรงกลาง / ข้อความล่าง)
+========================================= */
+@media screen and (max-width: 1024px) {
+
+    .product-section {
+        flex-direction: column;
+        padding: 80px 30px;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .product-left {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .product-img-bg {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-main {
+        height: auto;
+    }
+
+    /* การ์ดตรงกลาง */
+    .product-card {
+        position: static;
+        margin: 30px auto 0;
+        /* ถอยลงมา ไม่ติดภาพอีกต่อไป */
+        width: 40%;
+        min-width: 200px;
+    }
+
+    .card-list li {
+        font-size: 14px;   /* เดิม 10px */
+        line-height: 1.7;
+    }
+
+    .product-right {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 0;
+    }
+}
+
+/* สำหรับมือถือเล็กกว่า 430px */
+@media screen and (max-width: 430px) {
+
+    .product-card {
+        margin: 45px auto 0; /* ถอยลงเพิ่มอีกเล็กน้อยบนมือถือ */
+        width: 80%;
+    }
+
+    .product-title {
+        font-size: 32px;
+    }
+}
+
+/* =========================================
+   FOOTER SECTION
+========================================= */
+@media screen and (max-width: 1024px) {
+
+    .footer-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .footer-row {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-menu {
+        margin-top: 20px;
+    }
+}
