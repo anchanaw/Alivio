@@ -29,15 +29,15 @@
             <a href="#">Sign in</a>
             <a href="#" class="start-btn">Start Trial</a>
         </div>
-        
+
     </nav>
 
-    <header class="hero-section">
-        <div class="hero-content">
+    <header class="header-section">
+        <div class="header-content">
             <h1>Be aware,<br>Manage well.</h1>
             <p>Everyone experiences stress in different ways.<br>
                 Let Alivio guide you, in a personalized journal <br> experience, to overcome your stress.</p>
-            <a href="#" class="hero-btn">Find Your Way</a>
+            <a href="#" class="header-btn">Find Your Way</a>
         </div>
     </header>
 
@@ -174,7 +174,7 @@
                 overcome your stress.
             </p>
 
-            <a href="#" class="hero-btn product-btn">Find Your Way</a>
+            <a href="#" class="header-btn product-btn">Find Your Way</a>
         </div>
     </section>
 
@@ -192,6 +192,20 @@
         </ul>
     </footer>
 
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
+            if (window.innerWidth <= 1024) {
+
+                const steps = document.querySelectorAll(".step");
+
+                steps.forEach(step => {
+                    step.addEventListener("click", () => {
+                        step.classList.toggle("active");
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </html>

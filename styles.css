@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: 80px;
     color: #222;
     background-color: #fdfdfd;
 }
@@ -72,12 +73,11 @@ nav {
     font-weight: 500;
 }
 
-.hero-section {
+.header-section {
     height: 120vh;
     background-image: url("img/bg.png");
     background-size: cover;
     background-position: top center;
-    /* แนะนำ: เด้งขึ้นนิดให้เห็นใบหน้าเต็ม */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -85,25 +85,19 @@ nav {
     padding-right: 120px;
 }
 
-
-body {
-    padding-top: 80px;
-}
-
-.hero-content {
+.header-content {
     padding-top: 40px;
-    transform: translateY( -95px); /* ขยับขึ้น 20px */
+    transform: translateY(-95px);
 }
 
-
-.hero-content h1 {
+.header-content h1 {
     font-size: 70px;
     font-family: Georgia, serif;
     line-height: 1;
     color: #01996D;
 }
 
-.hero-content p {
+.header-content p {
     font-size: 20px;
     margin-top: 15px;
     color: #444;
@@ -112,7 +106,7 @@ body {
 
 }
 
-.hero-btn {
+.header-btn {
     display: inline-block;
     margin-top: 25px;
     background-color: #01996D;
@@ -126,7 +120,7 @@ body {
     transition: 0.3s ease;
 }
 
-.hero-btn:hover {
+.header-btn:hover {
     background-color: #017c58;
 }
 
@@ -206,7 +200,6 @@ body {
     color: #000;
     margin: 0;
     z-index: 1;
-    /* อยู่ด้านบนเลข */
     white-space: nowrap;
 }
 
@@ -282,7 +275,7 @@ body {
     background-color: #017c58;
 }
 
-/* RIGHT SIDE (Video Box) */
+/* RIGHT SIDE */
 .success-right {
     width: 50%;
     display: flex;
@@ -301,7 +294,6 @@ body {
     display: block;
 }
 
-/* Play Button */
 .play-btn {
     position: absolute;
     top: 50%;
@@ -309,9 +301,9 @@ body {
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    border: 2.5px solid white;  /* วงกลมขอบขาว */
-    border-radius: 50%;         /* วงกลม */
-    background: transparent;    /* โปร่งใส */
+    border: 2.5px solid white;
+    border-radius: 50%;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,7 +312,7 @@ body {
 }
 
 .play-btn:hover {
-    transform: translate(-50%, -50%) scale(1.1);  /* hover ใหญ่ขึ้นนิด */
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .play-icon-img {
@@ -328,16 +320,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    width: 31px;   /* ปรับขนาดตามต้องการ */
+    width: 31px;
     height: 31px;
     cursor: pointer;
-
-    opacity: 0.9;  /* ให้สว่างแบบพอดี */
+    opacity: 0.9;
     transition: 0.3s;
 }
 
-/* ----- PRODUCT SECTION ----- */
+/* PRODUCT SECTION */
 .product-section {
     display: flex;
     justify-content: space-between;
@@ -365,7 +355,6 @@ body {
     object-fit: cover;
 }
 
-/* CARD */
 .product-card {
     position: absolute;
     bottom: -80px;
@@ -396,7 +385,6 @@ body {
     margin: 8px auto 15px;
 }
 
-/* User section */
 .card-user {
     display: flex;
     flex-direction: column;
@@ -418,7 +406,6 @@ body {
     height: 100%;
     object-fit: cover;
     transform: scale(1.55) translateY(6%);
-    /* 👈 ซูม + เลื่อน */
 }
 
 .user-name {
@@ -438,14 +425,14 @@ body {
 
 .card-list {
     margin-top: 12px;
-    padding-left: -20px;         
-    list-style-position: outside; 
+    padding-left: -20px;
+    list-style-position: outside;
     line-height: 1.8;
 }
 
 .card-list li {
     text-align: left;
-    margin-left: 18px;       
+    margin-left: 18px;
     color: #000000;
     font-size: 10px;
     font-family: 'Lato', sans-serif;
@@ -487,7 +474,7 @@ body {
     padding: 25px 60px;
 }
 
-/* ----- FOOTER ----- */
+/* FOOTER */
 .footer-section {
     background-color: #245852;
     padding: 35px 30px;
