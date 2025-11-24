@@ -219,14 +219,15 @@ body {
 
 .steps {
   display: flex;
-  flex-wrap: wrap;
-  gap: 120px 80px; /* ปรับตาม Figma */
+  flex-wrap: nowrap;
+  gap: 52px; /* ปรับตาม Figma */
 }
 
 /* กล่อง step */
 .step-box {
   width: 390px;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
 }
 
@@ -241,9 +242,7 @@ body {
 /* ตัวเลขใหญ่ */
 .step-number {
   position: absolute;
-  top: -20px;
-  left: -10px;
-  font-family: "Merriweather", serif;
+  font-family: Georgia, serif;
   font-size: 150px;
   font-weight: 400;
   color: #d6eee7;
@@ -256,8 +255,8 @@ body {
   position: absolute;
   bottom: 40px;
   left: 70px;
-  font-family: "Merriweather", serif;
-  font-size: 28px;
+  font-family: Georgia, serif;
+  font-size: 30px;
   font-weight: 700;
   color: #000;
   margin: 0;
@@ -277,6 +276,65 @@ body {
 /* ภาพของ Step */
 .step-img {
   width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* กล่องทั้งอัน */
+.step-03 {
+  width: 435px;
+  height: 856px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.step03-header {
+  width: 100%;
+  height: 160px; /* ปรับตามภาพ */
+  position: relative;
+  overflow: hidden;
+}
+
+/* ตัวเลข 03 */
+.step03-number {
+  position: absolute;
+  top: -25px;
+  left: -5px;
+  font-family: "Merriweather", serif;
+  font-size: 150px;   /* เล็กกว่า step 01/02 ตามภาพ */
+  font-weight: 400;
+  color: #CDEBE3;     /* เขียวอ่อนตามภาพ */
+  margin: 0;
+  line-height: 1;
+}
+
+/* หัวข้อ Alivio! */
+.step03-title {
+  position: absolute;
+  top: 68px;    /* วางให้ซ้อนกับเลขแบบในภาพ */
+  left: 110px;
+  font-family: "Merriweather", serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* DESCRIPTION */
+.step03-desc {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  color: #4A4A4A;
+  margin: 20px 0 30px 0;
+}
+
+/* IMAGE */
+.step03-img {
+  width: 100%;
+  height: auto;
   border-radius: 12px;
   object-fit: cover;
 }
