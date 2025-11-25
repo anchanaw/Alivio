@@ -16,8 +16,6 @@ body {
 /* ===================
       NAVBAR
 =================== */
-
-/* ชั้น wrapper = เต็มจอ + sticky + shadow */
 .nav-wrapper {
   width: 100%;
   background-color: #fdfdfd;
@@ -27,7 +25,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ชั้น inner = 1440px + padding ตาม Figma */
 .nav-inner {
   max-width: 1440px;
   height: 84px;
@@ -45,17 +42,17 @@ body {
 /* CENTER MENU */
 .nav-center {
   display: flex;
-  gap: 72px;            /* ระยะห่างระหว่างเมนู */
-  margin-left: 173.43px; /* ระยะจากโลโก้ → เมนู */
+  gap: 72px;
+  margin-left: 173.43px;
   align-items: center;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 35px;            /* ← ระยะห่างระหว่าง Sign in กับปุ่ม */
-  width: 277px;         /* ความกว้างรวมจาก Figma */
-  height: 51px;         /* ความสูงจาก Figma */
+  gap: 35px;
+  width: 277px;
+  height: 51px;
   margin-left: 283px;
   box-sizing: border-box;
 }
@@ -74,8 +71,7 @@ body {
   color: #292929;
   text-decoration: none;
   line-height: 1;
-  white-space: nowrap;   /* ← ป้องกันขึ้นบรรทัดใหม่ */
-
+  white-space: nowrap;
 }
 
 /* BUTTON */
@@ -83,12 +79,12 @@ body {
   background-color: #01996D;
   color: #FFFFFF;
   border: none;
-  border-radius: 4px;   /* ตาม Figma */
+  border-radius: 4px;
   padding: 13px 40px;
   font-size: 18px;
   cursor: pointer;
-  width: 183px;         /* ให้เท่ากับ container */
-  height: 51px;         /* ให้เท่ากับ container */
+  width: 183px;
+  height: 51px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,11 +92,11 @@ body {
 
 .nav-center a:hover,
 .nav-right a:not(.start-btn):hover {
-    color: #01996D;
+  color: #01996D;
 }
 
 .start-btn:hover {
-    background-color: #017d5a;
+  background-color: #017d5a;
 }
 
 /* ===================
@@ -112,16 +108,15 @@ body {
   width: 100%;
   max-width: 1440px;
   height: 895px;
-
-  background-image: url("img/bg.png"); /* ใส่รูป hero */
+  background-image: url("img/bg.png");
   background-size: cover;
   background-position: center;
 }
 
 .hero-box {
   position: absolute;
-  top: 175px;   
-  left: 60px;   
+  top: 175px;
+  left: 60px;
   width: 440px;
   height: 384px;
   display: flex;
@@ -134,7 +129,7 @@ body {
   font-weight: 700;
   color: #01996D;
   line-height: 1.1;
-  margin: 0 0 30px 0;   /* ระยะล่างของหัวข้อ */
+  margin: 0 0 30px 0;
 }
 
 .hero-box p {
@@ -144,8 +139,7 @@ body {
   font-weight: 400;
   line-height: 157%;
   color: #545454;
-
-  margin: 0 0 30px 0;  /* ระยะด้านล่างตาม Figma */
+  margin: 0 0 30px 0;
 }
 
 .hero-btn {
@@ -158,7 +152,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
-  margin: 18px 0 0 0; /* ระยะด้านบนของปุ่ม */
+  margin: 18px 0 0 0;
 }
 
 /* ===================
@@ -167,7 +161,8 @@ body {
 .how-section {
   width: 1320px;
   height: 1386px;
-  margin: 169px 60px 51px 60px;   /* top right bottom left */
+  margin: 169px 60px 51px 60px;
+  /* top right bottom left */
 }
 
 .how-head {
@@ -182,22 +177,19 @@ body {
   font-weight: 600;
   line-height: 157%;
   color: #4A4A4A;
-  margin: 0 ;
+  margin: 0;
 }
-
 
 /* Flex layout ซ้าย–ขวา */
 .how-head-flex {
   display: flex;
   align-items: flex-end;
-  gap: 65px; /* ← ใส่ค่าระยะห่างที่ต้องการ */
+  gap: 65px;
 }
 
-
-/* หัวข้อใหญ่ */
 .how-title {
   width: 584px;
-  font-family: "Merriweather", serif;
+  font-family: Georgia, serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 157%;
@@ -207,134 +199,419 @@ body {
 
 /* ข้อความอธิบายด้านขวา */
 .how-desc {
-  width: 671px;                 /* จาก Figma */
-  height: 135px;                /* จาก Figma */
+  width: 671px;
+  height: 135px;
   font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-weight: 500;             /* จาก Figma */
-  line-height: 150%;            /* 30px */
+  font-weight: 500;
+  line-height: 150%;
   color: #545454;
-  margin: 0;                    /* ห้ามให้มี margin-top */
+  margin: 0;
 }
 
 .steps {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   flex-wrap: nowrap;
-  gap: 52px; /* ปรับตาม Figma */
+  gap: 52px;
 }
 
-/* กล่อง step */
+/* ========== STEP CONTAINER ========== */
 .step-box {
   width: 390px;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
 }
 
-/* กล่อง step-header */
+
 .step-header {
-  width: 269px;
-  height: 225px;
-  position: relative;
-  overflow: hidden;   /* ตัดส่วนเกินของเลข */
-}
-
-/* ตัวเลขใหญ่ */
-.step-number {
-  position: absolute;
-  font-family: Georgia, serif;
-  font-size: 150px;
-  font-weight: 400;
-  color: #d6eee7;
-  line-height: 1;
-  margin: 0;
-}
-
-/* ชื่อหัวข้อ Step */
-.step-title {
-  position: absolute;
-  bottom: 40px;
-  left: 70px;
-  font-family: Georgia, serif;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000;
-  margin: 0;
-  white-space: nowrap;
-}
-
-/* ย่อหน้า */
-.step-desc {
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 150%;
-  color: #4A4A4A;
-  margin: 20px 0 40px 0;
-}
-
-/* ภาพของ Step */
-.step-img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-/* กล่องทั้งอัน */
-.step-03 {
-  width: 435px;
-  height: 856px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* HEADER */
-.step03-header {
-  width: 100%;
-  height: 160px; /* ปรับตามภาพ */
   position: relative;
   overflow: hidden;
 }
 
-/* ตัวเลข 03 */
-.step03-number {
-  position: absolute;
-  top: -25px;
-  left: -5px;
-  font-family: "Merriweather", serif;
-  font-size: 150px;   /* เล็กกว่า step 01/02 ตามภาพ */
-  font-weight: 400;
-  color: #CDEBE3;     /* เขียวอ่อนตามภาพ */
-  margin: 0;
-  line-height: 1;
+/* ========== STEP DESCRIPTION & IMAGE ========== */
+.step-desc {
+  line-height: 150%;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-/* หัวข้อ Alivio! */
-.step03-title {
+.step-img {
+  width: 100%;
+  max-width: 390px;
+  height: 492px;
+}
+
+.step-1 .step-desc,
+.step-2 .step-desc {
+  width: 382px;
+  margin-top: 10px;
+}
+
+.step-3 .step-desc {
+  width: 435px;
+  margin-top: 1px;
+}
+
+.step-1 .step-img {
+  margin-top: 60px;
+}
+
+.step-2 .step-img {
+  margin-top: 37px;
+}
+
+.step-3 .step-img {
+  margin-top: 48px;
+}
+
+/* ========== STEP 1 ========== */
+.step-1 .step-header {
+  width: 269px;
+  height: 225px;
+}
+
+.step-1 .step-number {
   position: absolute;
-  top: 68px;    /* วางให้ซ้อนกับเลขแบบในภาพ */
-  left: 110px;
-  font-family: "Merriweather", serif;
+  left: 0;
+  top: 50px;
+  font-family: Georgia;
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(1, 153, 109, 0.2);
+}
+
+.step-1 .step-title {
+  position: absolute;
+  left: 88px;
+  top: 120px;
+  font-family: Georgia;
   font-size: 30px;
   font-weight: 700;
-  margin: 0;
-  color: #000;
   white-space: nowrap;
 }
 
-/* DESCRIPTION */
-.step03-desc {
-  font-family: Lato, sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  color: #4A4A4A;
-  margin: 20px 0 30px 0;
+.step-1 {
+  margin-top: 52px;
 }
 
-/* IMAGE */
-.step03-img {
+.step-2 {
+  margin-top: 339px;
+}
+
+.step-3 {
+  margin-top: 106px;
+}
+
+
+/* ========== STEP 2 ========== */
+.step-2 .step-header {
+  width: 392px;
+  height: 225px;
+}
+
+.step-2 .step-number {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  font-family: Georgia;
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(1, 153, 109, 0.2);
+}
+
+.step-2 .step-title {
+  position: absolute;
+  left: 79px;
+  top: 120px;
+  font-family: Georgia;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* ========== STEP 3 ========== */
+
+.step-3 .step-header {
+  width: 226px;
+  height: 225px;
+}
+
+.step-3 .step-number {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  font-family: Georgia;
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(1, 153, 109, 0.2);
+}
+
+.step-3 .step-title {
+  position: absolute;
+  left: 124px;
+  /* 1076 - 952 */
+  top: 120px;
+  /* 1578.96 - 1448 */
+  font-family: Georgia;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.step-3 .step-desc {
+  width: 435px;
+  height: 90px;
+}
+
+/* ===================
+      video section
+=================== */
+.video-section {
+  width: 1440px;
+  height: 922px;
+  background: #245852;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT TEXT AREA */
+.video-left {
+  max-width: 551px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 60px;
+}
+
+.video-title {
+  font-family: Georgia;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 157%;
+  color: #fff;
+  margin: 0;
+}
+
+.video-sub {
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 157%;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.video-btn {
+  width: 240px;
+  height: 65px;
+  padding: 20px 50px;
+  border-radius: 4px;
+  background: #01996D;
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* RIGHT VIDEO AREA */
+.video-right {
+  width: 747px;
+  margin-right: 60px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 747px;
+  height: 430px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-thumbnail {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  height: 100%;
   object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-play {
+  width: 67px;
+  height: 67px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===================
+      product section
+=================== */
+.product-section {
+  display: flex;
+  gap: 97px;
+  width: 1345px;
+  height: 648px;
+  margin: 120px 60px 156px 35px;
+}
+
+/* LEFT AREA */
+.product-left {
+  width: 638px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 638px;
+  height: 573px;
+  left: 25px;
+  border-radius: 18px;
+  overflow: visible;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+}
+
+/* CARD */
+.product-card {
+  position: absolute;
+  width: 296px;
+  height: 294px;
+  left: -25px;
+  bottom: -60px;
+  background: #fff;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 18px rgba(165, 165, 165, 0.25));
+  text-align: center;
+}
+
+/* Card elements */
+.card-img {
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 14px auto 10px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.55) translateY(6%);
+}
+
+
+.card-title {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 22px;
+}
+
+.card-line {
+  width: 110px;
+  height: 1px;
+  background: #000;
+  margin: 7px auto;
+
+}
+
+.card-heading {
+    font-family: Georgia;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* กล่องรายการ bullet */
+.card-list {
+    list-style: disc;
+    margin: 10px auto 0;
+    padding-left: 20px;
+    width: fit-content;   
+}
+
+/* ข้อความ bullet */
+.card-list li {
+    display: flex;
+    font-family: Lato;
+    font-size: 14px;
+    margin-bottom: 8px;
+    justify-content: flex-start;
+}
+
+.card-name {
+  font-family: Lato;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* RIGHT AREA */
+.product-right {
+  width: 584px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-subtitle {
+  font-family: Lato;
+  font-size: 25px;
+  font-weight: 600;
+  color: #424242;
+}
+
+.product-title {
+  font-family: Georgia;
+  font-size: 50px;
+  font-weight: 700;
+  color: #01996D;
+  line-height: 1.57;
+}
+
+.product-desc {
+  font-family: Lato;
+  font-size: 20px;
+  color: #484848;
+  line-height: 31px;
+}
+
+.product-btn {
+  width: 227px;
+  height: 65px;
+  padding: 20px 50px;
+  background: #01996D;
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
 }
