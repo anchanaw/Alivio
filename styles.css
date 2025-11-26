@@ -1,6 +1,3 @@
-/* Cleaned and merged CSS based on styles-ver2.css
-   Buttons kept EXACTLY as original — NOT modified. */
-
 /* =====================================================
    GLOBAL
 ===================================================== */
@@ -63,19 +60,21 @@ body {
 
 .nav-right a,
 .nav-center a {
-  font-weight: 500;
+
   color: #292929;
   text-decoration: none;
   line-height: 1;
 }
 
 .nav-center a {
+  font-weight: 500;
   font-size: 20px;
   white-space: nowrap;
 }
 
 .nav-right a {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .start-btn {
@@ -188,6 +187,7 @@ body {
 
 .how-desc {
   width: 671px;
+  height: 135px;
   font-size: 20px;
   font-weight: 500;
   line-height: 150%;
@@ -204,9 +204,17 @@ body {
 
 /* Shared STEP Elements */
 .step-box {
-  width: 390px;
   display: flex;
   flex-direction: column;
+}
+
+.step-1,
+.step-2 .step-box {
+  width: 390px;
+}
+
+.step-3 .step-box {
+  width: 435px;
 }
 
 .step-header {
@@ -243,28 +251,73 @@ body {
   width: 100%;
   max-width: 390px;
   height: 492px;
+  border-radius: 12px;
 }
 
+
 /* individual step adjustments */
-.step-1 { margin-top: 52px; }
-.step-2 { margin-top: 339px; }
-.step-3 { margin-top: 106px; }
+.step-1 {
+  margin-top: 52px;
+}
 
-.step-1 .step-header { width: 269px; height: 225px; }
-.step-2 .step-header { width: 392px; height: 225px; }
-.step-3 .step-header { width: 226px; height: 225px; }
+.step-2 {
+  margin-top: 339px;
+}
 
-.step-1 .step-title { left: 88px; top: 120px; }
-.step-2 .step-title { left: 79px; top: 120px; }
-.step-3 .step-title { left: 124px; top: 120px; }
+.step-3 {
+  margin-top: 106px;
+}
+
+.step-1 .step-header {
+  width: 269px;
+  height: 225px;
+}
+
+.step-2 .step-header {
+  width: 392px;
+  height: 225px;
+}
+
+.step-3 .step-header {
+  width: 226px;
+  height: 225px;
+}
+
+.step-1 .step-title {
+  left: 88px;
+  top: 120px;
+}
+
+.step-2 .step-title {
+  left: 79px;
+  top: 120px;
+}
+
+.step-3 .step-title {
+  left: 124px;
+  top: 120px;
+}
 
 .step-1 .step-desc,
-.step-2 .step-desc { width: 382px; }
-.step-3 .step-desc { width: 435px; }
+.step-2 .step-desc {
+  width: 382px;
+}
 
-.step-1 .step-img { margin-top: 60px; }
-.step-2 .step-img { margin-top: 37px; }
-.step-3 .step-img { margin-top: 48px; }
+.step-3 .step-desc {
+  width: 435px;
+}
+
+.step-1 .step-img {
+  margin-top: 60px;
+}
+
+.step-2 .step-img {
+  margin-top: 37px;
+}
+
+.step-3 .step-img {
+  margin-top: 48px;
+}
 
 /* =====================================================
    VIDEO SECTION
@@ -297,7 +350,8 @@ body {
 
 .video-sub {
   font-size: 25px;
-  font-weight: 600;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
   line-height: 157%;
   color: #fff;
   margin: 0;
@@ -312,6 +366,7 @@ body {
   background: #01996D;
   color: #fff;
   font-size: 20px;
+  font-family: Lato, sans-serif;
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -349,7 +404,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-/* CONTINUED */
+  /* CONTINUED */
 }
 
 .video-play {
@@ -468,7 +523,9 @@ body {
 .product-subtitle {
   margin: 0 0 10px 0;
   font-size: 25px;
+  font-family: Lato, sans-serif;
   font-weight: 600;
+  line-height: 157%;
   color: #424242;
 }
 
@@ -482,6 +539,7 @@ body {
 }
 
 .product-desc {
+  width: 530px;
   margin: 0 0 40px 0;
   font-size: 20px;
   color: #484848;
@@ -548,7 +606,9 @@ body {
 
 .footer-menu li {
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Lato, sans-serif;
+  line-height: 100%;
   color: #fff;
   margin-bottom: 60px;
 }
