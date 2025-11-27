@@ -1,11 +1,12 @@
-* {
+/** {
   outline: 1px solid red;
-  /* Debugging purpose */
-}
+}*/
 
+/*====================
+    Responsive large screen
+=====================*/
 @media (min-width: 1441px) {
 
-  /* NAV (พื้นหลัง + ขอบ + เงา) */
   nav {
     width: 100%;
     max-width: 100%;
@@ -18,7 +19,6 @@
     margin-right: auto;
   }
 
-  /* CONTENT FIXED WIDTH */
   .hero-section,
   .how-section,
   .video-section,
@@ -41,22 +41,24 @@
 /*====================
     Responsive ipad
 =====================*/
-@media(max-width: 1024px) {
+@media screen and (max-width:1024px) {
   .nav-inner {
     padding: 20px;
     height: auto;
   }
 
+  .nav-logo {
+    width: 120px !important;
+  }
+
   .nav-center {
     margin-left: 40px;
-    /* ลดจากของเดิมที่มากเกิน */
     gap: 40px;
   }
 
   .nav-right {
     margin-left: auto;
-    /* ดันไปขวาแบบไม่ล้น */
-    gap: 30px;
+    gap: 35px;
   }
 
   .start-btn {
@@ -66,13 +68,11 @@
 
   .hero-section {
     height: 650px;
-    /* ลดขนาดลง */
     background-position: center;
   }
 
   .hero-box {
     left: 30px;
-    /* ลดจาก 60px */
     width: 380px;
   }
 
@@ -108,24 +108,24 @@
 
   .steps {
     display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    gap: 60px;                
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
   }
 
-  .step-1, 
-  .step-2, 
+  .step-1,
+  .step-2,
   .step-3 {
-    width: 50%;    
+    width: 50%;
   }
- 
-  .step-2, 
+
+  .step-2,
   .step-3 {
-    margin-top: 0 !important;          
+    margin-top: 0 !important;
   }
 
   .step-box {
-    width: 80%;            
+    width: 80%;
     align-items: center;
   }
 
@@ -136,7 +136,7 @@
   }
 
   .step-img {
-    width: 100%;              /* รูปเต็มกรอบ */
+    width: 50%;
     height: auto;
     max-width: 100%;
   }
@@ -159,7 +159,7 @@
   }
 
   .step-title {
-    position: relative !important;  /* สำคัญที่สุด */
+    position: relative !important;
     top: 0 !important;
     left: 0 !important;
     font-size: 65px !important;
@@ -199,7 +199,7 @@
 
   .video-wrapper {
     width: 100% !important;
-    height: auto !important;   /* ป้องกันยืดหรือโดนบังคับขนาด */
+    height: auto !important;
   }
 
   .video-thumbnail {
@@ -210,20 +210,22 @@
 
   .product-section {
     width: 80% !important;
-    margin: 60px 20px !important;
+    margin: 60px auto !important;
     height: auto !important;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
   }
 
   .image-wrapper {
     width: 80% !important;
     height: auto !important;
     left: 0 !important;
+    margin: 0 auto !important;
   }
 
   .main-image {
-    width: 80% !important;
+    width: 100% !important;
     height: auto !important;
   }
 
@@ -239,5 +241,214 @@
 
   .product-desc {
     width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .nav-inner {
+    padding: 15px 20px !important;
+  }
+
+  .nav-center {
+    gap: 20px !important;
+    margin-left: 50px !important;
+  }
+
+  .nav-right {
+    width: auto !important;
+    margin-left: auto !important;
+    gap: 20px !important;
+  }
+
+  .nav-center a,
+  .nav-right a {
+    font-size: 16px !important;
+  }
+
+  .start-btn {
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .hero-section {
+    height: 450px;
+    background-position: center;
+  }
+
+  .hero-box {
+    left: 30px;
+    top: 50px;
+    width: 300px;
+  }
+
+  .hero-box h1 {
+    font-size: 42px !important;
+  }
+
+  .hero-box p {
+    font-size: 18px !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-btn {
+    width: 60% !important;
+    height: auto !important;
+    padding: 15px !important;
+    font-size: 15px;
+  }
+}
+
+/* =========================
+      Mobile Responsive
+   =========================*/
+@media screen and (max-width: 767px) {
+
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav-inner {
+    padding: 12px 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    width: 95px !important;
+    flex-shrink: 0;
+  }
+
+  .nav-center {
+    display: flex !important;
+    gap: 14px !important;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .nav-center a {
+    font-size: 14px !important;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px !important;
+    flex-shrink: 0;
+  }
+
+  .start-btn {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .nav-inner.wrap {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 640px) {
+    .nav-inner {
+      flex-wrap: wrap;
+    }
+
+    .nav-center {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 18px;
+    }
+  }
+
+  .hero-section {
+    height: 420px !important;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-box {
+    width: 85% !important;
+    left: 8% !important;
+    top: 40px !important;
+  }
+
+  .hero-box h1 {
+    font-size: 38px !important;
+  }
+
+  .hero-box p {
+    font-size: 16px !important;
+  }
+
+  .hero-btn {
+    width: 100% !important;
+    padding: 14px !important;
+    margin-top: 15px !important;
+  }
+
+  .how-section {
+    margin: 80px 0 !important;
+    padding: 0 18px !important;
+  }
+
+  .how-head-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .steps {
+    gap: 50px;
+  }
+
+  .step-img {
+    width: 75% !important;
+    margin: 0 auto;
+  }
+
+  .step-number { font-size: 80px !important; }
+  .step-title { font-size: 36px !important; }
+  .step-desc { font-size: 16px !important; }
+
+  .video-section {
+    padding: 25px 18px !important;
+    flex-direction: column !important;
+  }
+
+  .video-left,
+  .video-right {
+    width: 100% !important;
+  }
+
+  .product-section {
+    width: 90% !important;
+    margin: 45px auto !important;
+    flex-direction: column !important;
+  }
+
+  .image-wrapper {
+    width: 100% !important;
+    margin-bottom: 25px !important;
+  }
+
+  .product-right {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .footer {
+    padding: 40px 20px !important;
+    height: auto !important;
   }
 }
