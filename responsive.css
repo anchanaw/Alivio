@@ -38,6 +38,35 @@
   }
 }
 
+/* ==========================
+   FIX — สำหรับจอเล็กกว่า 1441px
+   ========================== */
+@media (max-width: 1440px) {
+
+  /* ให้กินจอเต็ม ไม่ fix 1440 */
+  nav,
+  .nav-inner,
+  .hero-section,
+  .how-section,
+  .video-section,
+  .product-section,
+  .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ป้องกันล้นจอ */
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
 /*====================
     Responsive ipad
 =====================*/
