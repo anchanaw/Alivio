@@ -1,8 +1,7 @@
-/* ================================
-   SCREEN > 1440px
-   Nav expands full width
-   All content stays fixed at 1440px
-   ================================ */
+* {
+  outline: 1px solid red;
+  /* Debugging purpose */
+}
 
 @media (min-width: 1441px) {
 
@@ -39,3 +38,206 @@
   }
 }
 
+/*====================
+    Responsive ipad
+=====================*/
+@media(max-width: 1024px) {
+  .nav-inner {
+    padding: 20px;
+    height: auto;
+  }
+
+  .nav-center {
+    margin-left: 40px;
+    /* ลดจากของเดิมที่มากเกิน */
+    gap: 40px;
+  }
+
+  .nav-right {
+    margin-left: auto;
+    /* ดันไปขวาแบบไม่ล้น */
+    gap: 30px;
+  }
+
+  .start-btn {
+    padding: 10px 25px;
+    height: auto;
+  }
+
+  .hero-section {
+    height: 650px;
+    /* ลดขนาดลง */
+    background-position: center;
+  }
+
+  .hero-box {
+    left: 30px;
+    /* ลดจาก 60px */
+    width: 380px;
+  }
+
+  .hero-box h1 {
+    font-size: 54px;
+  }
+
+  .hero-box p {
+    width: 360px;
+    font-size: 18px;
+  }
+
+  .how-section {
+    width: 100%;
+    margin: 120px 0;
+  }
+
+
+  .how-label {
+    margin-left: 10px;
+  }
+
+  .how-head-flex {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+  }
+
+  .how-desc {
+    justify-self: center;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    gap: 60px;                
+  }
+
+  .step-1, 
+  .step-2, 
+  .step-3 {
+    width: 50%;    
+  }
+ 
+  .step-2, 
+  .step-3 {
+    margin-top: 0 !important;          
+  }
+
+  .step-box {
+    width: 80%;            
+    align-items: center;
+  }
+
+  .step-1 .step-img,
+  .step-2 .step-img,
+  .step-3 .step-img {
+    margin-top: 0 !important;
+  }
+
+  .step-img {
+    width: 100%;              /* รูปเต็มกรอบ */
+    height: auto;
+    max-width: 100%;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+  }
+
+  .step-number {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 100px !important;
+    line-height: 1;
+  }
+
+  .step-title {
+    position: relative !important;  /* สำคัญที่สุด */
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 65px !important;
+    font-weight: 700;
+    white-space: nowrap;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  .step-desc {
+    width: 100% !important;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .video-section {
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto !important;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .video-left {
+    width: 100% !important;
+    margin-left: 0 !important;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .video-right {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  .video-wrapper {
+    width: 100% !important;
+    height: auto !important;   /* ป้องกันยืดหรือโดนบังคับขนาด */
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .product-section {
+    width: 80% !important;
+    margin: 60px 20px !important;
+    height: auto !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    width: 80% !important;
+    height: auto !important;
+    left: 0 !important;
+  }
+
+  .main-image {
+    width: 80% !important;
+    height: auto !important;
+  }
+
+  .product-card {
+    left: 0 !important;
+    bottom: -20px !important;
+    margin: 0 auto;
+  }
+
+  .product-right {
+    width: 100% !important;
+  }
+
+  .product-desc {
+    width: 100% !important;
+  }
+}

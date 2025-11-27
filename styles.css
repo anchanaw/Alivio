@@ -443,11 +443,6 @@ body {
   object-fit: cover;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-}
 
 .product-card {
   position: absolute;
