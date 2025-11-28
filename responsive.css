@@ -1,6 +1,6 @@
-/** {
+* {
   outline: 1px solid red;
-}*/
+}
 
 /*====================
     Responsive large screen
@@ -35,35 +35,6 @@
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
-  }
-}
-
-/* ==========================
-   FIX — สำหรับจอเล็กกว่า 1441px
-   ========================== */
-@media (max-width: 1440px) {
-
-  /* ให้กินจอเต็ม ไม่ fix 1440 */
-  nav,
-  .nav-inner,
-  .hero-section,
-  .how-section,
-  .video-section,
-  .product-section,
-  .footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  /* ป้องกันล้นจอ */
-  * {
-    box-sizing: border-box;
-  }
-
-  img {
-    max-width: 100% !important;
-    height: auto !important;
   }
 }
 
@@ -334,9 +305,7 @@
 /* =========================
       Mobile Responsive
    =========================*/
-/* =====================================================
-      Mobile – Max-width 767px (nav-center เวอร์ชันทดลอง)
-   ===================================================== */
+
 @media screen and (max-width: 767px) {
 
   * {
@@ -366,12 +335,12 @@
     order: 1;
   }
 
-  /* ---------- nav-center อยู่แถวที่ 2 แบบกลาง ---------- */
+  /* ---------- nav-center ---------- */
   .nav-center {
     order: 2;
-    width: 100%;         /* ให้กินทั้งแถว */
+    width: 100%;         
     display: flex !important;
-    justify-content: center !important; /* อยู่กลางจริง */
+    justify-content: center !important; 
     align-items: center;
     gap: 16px !important;
     margin-top: 8px;
@@ -410,7 +379,7 @@
   }
 
   .hero-btn {
-    width: 100% !important;
+    width: 60% !important;
     padding: 14px !important;
     margin-top: 15px !important;
   }
@@ -426,6 +395,12 @@
     text-align: center !important;
   }
 
+  .how-desc {
+    text-align: left !important;
+    font-size: 16px !important;
+    height: auto !important;
+  }
+
   .steps {
     gap: 50px !important;
   }
@@ -433,6 +408,21 @@
   .step-img {
     width: 75% !important;
     margin: 0 auto !important;
+  }
+  
+  .step-title {
+    white-space: normal !important;
+    font-size: 25px !important;
+    font-weight: 700;
+    align-self: flex-end;
+  }
+
+  .step-number {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    font-size: 60px !important;
+    line-height: 1;
   }
 
   /* ---------------- VIDEO ---------------- */
@@ -477,6 +467,7 @@
     text-align: center !important;
     overflow-x: hidden !important;
   }
+  
 
   .video-sub {
     white-space: wrap !important;
@@ -494,7 +485,7 @@
   }
 
   .video-btn {
-    width: 100% !important;
+    width: 60% !important;
     padding: 12px !important;
     margin-top: 20px !important;
     font-size: 16px !important;
@@ -505,15 +496,23 @@
     width: 90% !important;
     margin: 45px auto !important;
     flex-direction: column !important;
+    gap: 0 !important;
   }
 
   .image-wrapper {
     width: 100% !important;
     margin-bottom: 25px !important;
+    height: auto !important;
   }
 
   .product-right {
     text-align: center;
+  }
+
+  .product-card {
+    position: static !important;
+    width: 90% !important;
+    margin: 20px auto 0 auto !important;
   }
 
   /* ---------------- FOOTER ---------------- */
